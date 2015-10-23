@@ -6,7 +6,6 @@
 
 \usepackage[scale=0.7,top=1cm,bottom=1cm,left=2cm, right=2cm]{geometry}
 
-% personal data
 \name{Paul}{Li\'etar}
 %\address{26 chemin saint Jean}{38700 La Tronche}{France}
 %\phone[mobile]{+33~7~78~21~53~78}
@@ -20,9 +19,6 @@
 
 \setlength{\hintscolumnwidth}{0.18\textwidth}
 
-\let\oldcventry\cventry
-\renewcommand*{\cventry}[6] { \oldcventry[0.70em]{#1}{#2}{#3}{#4}{#5}{#6} }
-
 \begin{document}
 \makecvtitle
 
@@ -32,50 +28,61 @@
 \cventry{2010-2013}{French Baccalaureate}{}{}{}{With Honors in Mathematics}  % arguments 3 to 6 can be left empty
 
 \section{Work experience}
-\cventry{October 2013\\-- February 2014}{Software Developer}{DecaWave}{Dublin}{Ireland}{
-    Real Time Location System software development using DecaWave's ultra wide band sillicon solution.
-    Embedded development on ARM Cortex-m3 powered devices, along with coordinator software on PC.
+\cventry{Summer 2015\\3 months}{Software Engineering Intern}{Google}{London}{}{
+    Certificate Transparency for Android
+    \begin{itemize}
+        \item Added OCSP and SCT extensions support in BoringSSL, Google's TLS implementation forked from OpenSSL, and in Conscrypt, the Java wrapper used by Android applications
+        \item Implemented Signed Certificate Timestamp verification within Conscrypt
+        \item Allow Android Applications to opt-in to Certificate Transparency verification when connecting to their backend
+    \end{itemize}
 }
 
-\oldcventry{July 2013}{One month summer job}{Movea}{Grenoble}{France}{}
+\cventry{Winter 2013/14\\5 months}{Software Developer}{DecaWave}{Dublin}{}{
+    Real Time Location System software development using DecaWave's ultra wide band sillicon solution.
+    \begin{itemize}
+        \item Embedded C development on ARM Cortex-M3 powered devices
+        \item C++ coordinator software on PC
+        \item Qt based mobile viewer for Android
+    \end{itemize}
+}
 
-\cventry{July 2012}{Three weeks internship}{Movea}{Grenoble}{France}{
-    In both cases, development of applications for Android devices, demonstrating the use cases of products made by Movea,
+\cventry{July 2013, 4 weeks\\ July 2012, 3 weeks}{Software Developer}{Movea}{Grenoble}{}{
+    Development of applications for Android devices, demonstrating the use cases of products made by Movea,
     a leading motion sensor data fusion start-up, recently acquired by Invensense.
 }
 
-\cventry{May -- July 2013}{Volunteer}{Hexagone}{Meylan}{France}{
+\cventry{May -- July 2013}{Volunteer}{Hexagone}{Grenoble}{}{
     Development of an iOS application for l'Atelier Arts Sciences.
 }
 
-\cventry{July 2011}{Three weeks internship}{Parrot}{Paris}{France}{
-    Port / Rewrite of an iPhone game from Unity to a lightweight OpenGL engine for Parrot's consumer drones.
-}
+%\cventry{Summer 2011}{Three weeks internship}{Parrot}{Paris}{France}{
+%    Port / Rewrite of an iPhone game from Unity to a lightweight OpenGL engine for Parrot's consumer drones.
+%}
 
 %\cventry{December 2009}{One week internship}{ST Microelectronics}{Agrate}{Italy}{
 %    Development of a Symbian S60 application to display images from a network camera.
 %}
 
 \cventry{}{Contributions to Open Source Projects}{}{}{}{
-\href{https://github.com/docker/docker}{Docker},
-\href{https://github.com/progrium/dokku}{Dokku},
-\href{https://github.com/abrasive/shairport}{ShairPort},
-\href{https://github.com/jflesch/paperwork}{Paperwork},
-...}
+    \href{https://github.com/docker/docker}{Docker},
+    \href{https://github.com/progrium/dokku}{Dokku},
+    \href{https://github.com/abrasive/shairport}{ShairPort},
+    \href{https://github.com/jflesch/paperwork}{Paperwork},
+    ...
+}
 
 \section{Activities, achievements and personal experience}
+\cventry{2009 to present}{Competitive Rowing}{}{}{}{Bronze medal at French national championship in 2010 in boat of eight.}
+
+\cventry{Spring 2014}{Backpacked alone throughout Italy and Corsica}{}{}{}{}
+
 \cventry{}{Finalist at Prologin, the under 21 French national computing contest}{}{}{}{12th in 2011 and 67th in 2012.}
 
-\cventry{}{Competitive Rowing}{}{}{}{Bronze medal at French national championship in 2010 in boat of eight.}
-
-\cventry{}{Backpacked alone throughout Italy and Corsica in Spring 2014}{}{}{}{}
-
 \cventry{}{Lived abroad with family in Singapore (2 years) and California (4 years)}{}{}{}{}
-\cventry{}{Traveled abroad extensively with family}{}{}{}{}
 
 \section{Technical skills}
-\cvitem{Languages}{C, C++, Python, Objective-C, Java, Go, Haskell}
-\cvitem{Platforms}{PC, STM32, ATmega, iOS, Android}
+\cvitem{Languages}{C, C++, Python, Java, Haskell, Go, Rust}
+\cvitem{Platforms}{PC, Android, STM32}
 
 \section{Languages}
 \cvitem{French}{Native language}
