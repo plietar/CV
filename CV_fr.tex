@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\usepackage[francais]{babel}
+
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\usepackage[scale=0.75]{geometry}
+
+% personal data
+\name{Paul}{Li\'etar}
+\address{26 chemin saint Jean}{38700 La Tronche}
+\phone[mobile]{+33~7~78~21~53~78}
+%\phone[fixed]{+33~4~76~49~91~83}
+\email{paul@lietar.net}
+%\homepage{www.johndoe.com}
+%\social[linkedin]{john.doe}
+%\social[twitter]{jdoe}
+%\social[github]{plietar}
+\extrainfo{17 ans}
+%\photo[64pt][0.4pt]{picture}
+
+%\setlength\separatorcolumnwidth{0pt}
+\setlength{\hintscolumnwidth}{0.18\textwidth}
+
+
+\let\oldcventry\cventry
+\renewcommand*{\cventry}[6] { \oldcventry[0.75em]{#1}{#2}{#3}{#4}{#5}{#6} }
+
+\begin{document}
+\makecvtitle
+
+\cventry{Octobre 2014}{Math\'ematiques et Informatique}{Imperial College}{Londres}{}{Admis en mars 2013, pour une entr\'ee diff\'er\'ee en octobre 2014}
+
+\section{Dipl\^omes}
+\cventry{2010-2013}{Baccalaur\'eat G\'en\'eral}{S\'erie S, Sciences de l'Ing\'enieur}{Sp\'ecialit\'e Maths}{}{Mention Tr\`es Bien}  % arguments 3 to 6 can be left empty
+\cventry{2013}{iBT Toefl}{}{}{}
+%{Comp\'ehension orale: 28, Compr\'ehension \'ecrite: 27,\newline{}Expression orale: 24, Expression \'ecrite: 29,\newline{}Total : 108/120}
+{108/120}
+
+\section{Exp\'eriences}
+\cventry{Octobre 2013\\\`a F\'evrier 2014}{D\'eveloppeur informatique}{DecaWave}{Dublin}{Irlande}
+{D\'eveloppement d'un syt\`eme de positionnement temps r\'eel}
+
+\cventry{Juillet 2013}{D\'eveloppeur informatique}{Movea}{Grenoble}{France}{}
+
+\cventry{Mai \`a Octobre 2013}{Volontaire}{Hexagone}{Meylan}{France}{D\'evelopment d'applications iOS pour l'Atelier Arts Sciences.\newline{}\url{https://itunes.apple.com/us/app/arts-sciences/id652180407}}
+
+\cventry{Juillet 2012}{Stage de trois semaines}{Movea}{Grenoble}{France}
+{D\'eveloppement d'applications pour tablette et smartphone Android, de d\'emonstration des produits de Movea}
+
+\cventry{Juillet 2011}{Stage de trois semaines}{Parrot}{Paris}{France}{Portage / R\'e\'ecriture d'un jeu iPhone de Unity \`a une biblioth\`eque OpenGL l\'eg\`ere.}
+
+\cventry{December 2009}{Stage d'une semaine}{ST Microelectronics}{Agrate}{Italie}{D\'eveloppement d'une application Symbian S60 pour afficher des images d'une cam\'era r\'eseau.}
+
+\cventry{}{Deux fois finaliste au Concours National d'Informatique}{Prologin}{}{}{12\`eme en 2011 et 67\`eme en 2012.}
+
+\section{Comp\'etences}
+\cvitem{Langages}{C, C++, Python, Objective-C, Java}
+\cvitem{Plateformes}{PC, STM32, ATmega, iOS, Android}
+\cvitem{Outils}{Tableur, Traitement de texte}
+%\cvitem{Bilbioth\`eques}{Qt, Cocoa, OpenGL, Bullet, JNI}
+\end{document}

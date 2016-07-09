@@ -1,0 +1,89 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\usepackage[scale=0.7,top=1cm,bottom=1cm,left=2cm, right=2cm]{geometry}
+
+% personal data
+\name{Paul}{Li\'etar}
+%\address{26 chemin saint Jean}{38700 La Tronche}{France}
+%\phone[mobile]{+33~7~78~21~53~78}
+\phone[mobile]{+44~7518~295042}
+%\phone[fixed]{+33~4~76~49~91~83}
+\email{paul@lietar.net}
+\social[github]{plietar}
+\social[linkedin]{plietar}
+\extrainfo{Born on December 28th, 1996}
+
+
+\setlength{\hintscolumnwidth}{0.18\textwidth}
+
+\let\oldcventry\cventry
+\renewcommand*{\cventry}[6] { \oldcventry[0.70em]{#1}{#2}{#3}{#4}{#5}{#6} }
+
+\begin{document}
+\makecvtitle
+
+\cventry{2014-2018}{Mathematics and Computing}{Imperial College}{London}{}{}
+
+\section{Diplomas and Education}
+\cventry{2010-2013}{French Baccalaureate}{}{}{}{With Honors in Mathematics}  % arguments 3 to 6 can be left empty
+
+\section{Work experience}
+\cventry{October 2013\\-- February 2014}{Software Developer}{DecaWave}{Dublin}{Ireland}{
+    Real Time Location System software development using DecaWave's ultra wide band sillicon solution.
+    Embedded development on ARM Cortex-m3 powered devices, along with coordinator software on PC.
+}
+
+\oldcventry{July 2013}{One month summer job}{Movea}{Grenoble}{France}{}
+
+\cventry{July 2012}{Three weeks internship}{Movea}{Grenoble}{France}{
+    In both cases, development of applications for Android devices, demonstrating the use cases of products made by Movea,
+    a leading motion sensor data fusion start-up, recently acquired by Invensense.
+}
+
+\cventry{May -- July 2013}{Volunteer}{Hexagone}{Meylan}{France}{
+    Development of an iOS application for l'Atelier Arts Sciences.
+}
+
+\cventry{July 2011}{Three weeks internship}{Parrot}{Paris}{France}{
+    Port / Rewrite of an iPhone game from Unity to a lightweight OpenGL engine for Parrot's consumer drones.
+}
+
+%\cventry{December 2009}{One week internship}{ST Microelectronics}{Agrate}{Italy}{
+%    Development of a Symbian S60 application to display images from a network camera.
+%}
+
+\cventry{}{Contributions to Open Source Projects}{}{}{}{
+\href{https://github.com/docker/docker}{Docker},
+\href{https://github.com/progrium/dokku}{Dokku},
+\href{https://github.com/abrasive/shairport}{ShairPort},
+\href{https://github.com/jflesch/paperwork}{Paperwork},
+...}
+
+\section{Activities, achievements and personal experience}
+\cventry{}{Finalist at Prologin, the under 21 French national computing contest}{}{}{}{12th in 2011 and 67th in 2012.}
+
+\cventry{}{Competitive Rowing}{}{}{}{Bronze medal at French national championship in 2010}
+
+\cventry{}{Backpacked alone through out to Italy and Corsica in Spring 2014}{}{}{}{}
+
+\oldcventry{}{Lived abroad with family in Singapore (2 years) and California (4 years)}{}{}{}{}
+\cventry{}{Traveled abroad extensively with family.}{}{}{}{}
+
+\section{Technical skills}
+\cvitem{Languages}{C, C++, Python, Objective-C, Java, Go}
+\cvitem{Platforms}{PC, STM32, ATmega, iOS, Android}
+
+\section{Languages}
+\cvitem{French}{Native language}
+\cvitem{English}{Fluent, iBT Toefl 108/120}
+\cvitem{Spanish}{Basic}
+
+\addvspace{2em}
+\cventry{}{\textit{References upon request}}{}{}{}{}
+
+\makecvfooter
+\end{document}
