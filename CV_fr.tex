@@ -1,62 +1,169 @@
 \documentclass[11pt,a4paper,sans]{moderncv}
-\usepackage[francais]{babel}
+
 
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 
-\usepackage[scale=0.75]{geometry}
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{xspace}
 
-% personal data
 \name{Paul}{Li\'etar}
-\address{26 chemin saint Jean}{38700 La Tronche}
-\phone[mobile]{+33~7~78~21~53~78}
+%\address{26 chemin saint Jean}{38700 La Tronche}{France}
+%\phone[mobile]{+33~7~78~21~53~78}
 %\phone[fixed]{+33~4~76~49~91~83}
+\phone[mobile]{+44~7518~295042}
 \email{paul@lietar.net}
-%\homepage{www.johndoe.com}
-%\social[linkedin]{john.doe}
-%\social[twitter]{jdoe}
 %\social[github]{plietar}
-\extrainfo{17 ans}
-%\photo[64pt][0.4pt]{picture}
+%\social[linkedin]{plietar}
+%\extrainfo{Born on December 28th, 1996}
 
-%\setlength\separatorcolumnwidth{0pt}
 \setlength{\hintscolumnwidth}{0.18\textwidth}
-
-
-\let\oldcventry\cventry
-\renewcommand*{\cventry}[6] { \oldcventry[0.75em]{#1}{#2}{#3}{#4}{#5}{#6} }
+\newcommand{\Cpp}{\texttt{C++}\xspace}
 
 \begin{document}
 \makecvtitle
 
-\cventry{Octobre 2014}{Math\'ematiques et Informatique}{Imperial College}{Londres}{}{Admis en mars 2013, pour une entr\'ee diff\'er\'ee en octobre 2014}
+\section{Experience professionelle}
+\cventry{2022-2023}{Ing\'enieur de recherche}{Microsoft Research}{}{Cambridge, UK}{}
+\cventry{2021-2022}{Ing\'enieur logiciel}{Cloudflare}{}{Londres}{
+    I was an engineer on Quicksilver, the distributed key-value store that
+    powers Cloudflare's edge network, replicating customer configurations from
+    the core datacenter to all servers around the world.
+    I worked on a project to partition the database across multiple nodes and
+    played a large role in in designing a scheme to provide a consistent view
+    to applications, even in the face of asynchronous replication. I lead
+    the development of a new caching layer to optimize median request latency.
+}
+\cventry{2019\\9 months}{Chercheur Stagiaire}{Microsoft Research}{}{Cambridge, UK}{
+    I participated in the design of Verona, a programming language for safe
+    infrastructure programming. I designed and implemented the original
+    compiler and bytecode interpreter, which has been used to show-case the
+    language both internally and externally.\\
+    I optimized and benchmarked \textit{snmalloc}, the memory allocator on top
+    of which the Verona runtime is built. I was the first author on our paper
+    describing the allocator's operation, and presented the results at the ISMM
+    conference in Phoenix, AZ.
+}
+\cventry{2017-2018}{Ing\'enieur logiciel}{Google}{Counter-Abuse Technology}{Zurich}{
+    I worked on Android’s device integrity solution, protecting Google’s
+    services against automated fraud and abuse. I worked both on the
+    server side infrastructure, serving billions of devices around the world,
+    and on the client side powering said devices.
+}
+\cventry{\'Et\'e 2016\\3 mois}{Stagiaire en g\'enie logiciel}{Google}{Android Security}{Mountain View}{
+    I investigated the use of Rust to write Android services, with the
+    long-term vision of replacing the use of \Cpp in low-level, performance
+    sensitve components. I focused on the interopability between newly written
+    Rust code and existing \Cpp and Java code, both intra- and inter-process. %\\
+    % For the latter, I implemented a Rust library to use the binder IPC
+    % mechanism present in the Android devices, by communicating with the
+    % corresponding kernel driver through ioctl. This allowed new services to be
+    % written entirely in Rust, while still being able to interface with services
+    % and applications written in Java and \Cpp.
+}
 
-\section{Dipl\^omes}
-\cventry{2010-2013}{Baccalaur\'eat G\'en\'eral}{S\'erie S, Sciences de l'Ing\'enieur}{Sp\'ecialit\'e Maths}{}{Mention Tr\`es Bien}  % arguments 3 to 6 can be left empty
-\cventry{2013}{iBT Toefl}{}{}{}
-%{Comp\'ehension orale: 28, Compr\'ehension \'ecrite: 27,\newline{}Expression orale: 24, Expression \'ecrite: 29,\newline{}Total : 108/120}
-{108/120}
+\cventry{\'Et\'e 2015\\3 mois}{Stagiaire en g\'enie logiciel}{Google}{Certificate Transparency}{London}{
+    I added support for Certificate Transparency to Android's network stack.
+    This required implementing the OCSP and SCT extensions to BoringSSL and
+    Conscrypt, the TLS implementations used by Android applications. I added
+    an API allowing Android applications to opt-in to Certificate Transparency
+    verification when establishing new network connections.
+}
 
-\section{Exp\'eriences}
-\cventry{Octobre 2013\\\`a F\'evrier 2014}{D\'eveloppeur informatique}{DecaWave}{Dublin}{Irlande}
-{D\'eveloppement d'un syt\`eme de positionnement temps r\'eel}
+\cventry[1em]{Hiver 2013/14\\5 mois}{Software Developer}{DecaWave}{Dublin}{}{
+    Contributed to the development of DecaWave's Real Time Location System
+    software. I worked both on the firmware running on ARM Cortex M3 devices,
+    interfacing with DecaWave's custom silicon, as well as on the development
+    of the coordination software on desktop, productionizing the
+    algorithms designed by the research team.
+}
 
-\cventry{Juillet 2013}{D\'eveloppeur informatique}{Movea}{Grenoble}{France}{}
+%\cventry[1em]{July 2013, 4 weeks\\July 2012, 3 weeks}{Software Developer}{Movea}{Grenoble}{}{
+%    Development of applications for Android devices, demonstrating the use cases of products made by Movea,
+%    a leading motion sensor data fusion start-up, recently acquired by Invensense.
+%}
 
-\cventry{Mai \`a Octobre 2013}{Volontaire}{Hexagone}{Meylan}{France}{D\'evelopment d'applications iOS pour l'Atelier Arts Sciences.\newline{}\url{https://itunes.apple.com/us/app/arts-sciences/id652180407}}
+%\cventry[1em]{Spring 2013}{Volunteer}{Hexagone}{Grenoble}{}{
+%    Development of an iOS application for l'Atelier Arts Sciences.
+%}
+%
+%\cventry[1em]{July 2011\\3 weeks}{Intern}{Parrot}{Paris}{}{
+%    Rewrite of an iPhone game from Unity to a lightweight OpenGL engine for Parrot's drones.
+%}
 
-\cventry{Juillet 2012}{Stage de trois semaines}{Movea}{Grenoble}{France}
-{D\'eveloppement d'applications pour tablette et smartphone Android, de d\'emonstration des produits de Movea}
+%\cventry{December 2009\\1 week}{Intern}{ST Microelectronics}{Agrate}{Italy}{
+%    Development of a Symbian S60 application to display images from a network camera.
+%}
 
-\cventry{Juillet 2011}{Stage de trois semaines}{Parrot}{Paris}{France}{Portage / R\'e\'ecriture d'un jeu iPhone de Unity \`a une biblioth\`eque OpenGL l\'eg\`ere.}
+\section{Publications}
+\cventry{Juin 2019}{Snmalloc: a message passing allocator}{}{}{}{
+    \textit{Proceedings of the 2019 ACM SIGPLAN International Symposium on Memory Management}
+}
 
-\cventry{December 2009}{Stage d'une semaine}{ST Microelectronics}{Agrate}{Italie}{D\'eveloppement d'une application Symbian S60 pour afficher des images d'une cam\'era r\'eseau.}
+\section{Education}
+\cventry{2019-2021}{PhD Program (unfinished)}{Imperial College}{London}{}{
+    I worked on the design and formalization of a type system for regions,
+    bringing safe and performant memory management to systems programming.
+    The type system forms the foundations of the Verona programming language.
+}
 
-\cventry{}{Deux fois finaliste au Concours National d'Informatique}{Prologin}{}{}{12\`eme en 2011 et 67\`eme en 2012.}
+\cventry{2014-2017}{BEng Mathematics and Computer Science}{Imperial College}{London}{}{
+    Obtenu avec la plus haute distinction (\textit{first class honours}).
+    Mon m\'emoire de recherche, \textit{Formalizing Generics in Pony}, fut distingu\'e et m'a valu de recevoir le prix \textit{Corporate Partnership Programme Award}, decerne a un eleve de derniere annee pour 
 
-\section{Comp\'etences}
-\cvitem{Langages}{C, C++, Python, Objective-C, Java}
-\cvitem{Plateformes}{PC, STM32, ATmega, iOS, Android}
-\cvitem{Outils}{Tableur, Traitement de texte}
-%\cvitem{Bilbioth\`eques}{Qt, Cocoa, OpenGL, Bullet, JNI}
+    My bachelor thesis on \textit{Formalizing Generics in Pony} was selected as a distinguished project, and I
+    received the , awarded to final year students for outstanding
+    achievement in their individual projects.
+}
+
+% \cventry{2010-2013}{French Baccalaureate}{}{}{}{With Honors in Mathematics}
+
+
+%\section{Projects}
+%\cventry[1em]{Spring 2016}{Outgain}{Imperial College 2nd Year Group Project}{}{}{
+%    Online multiplayer game where users write an artificial intelligence, with an educative focus.\\
+%    \textit{IBM 2nd Year Group Project Prize} for best third term project in a second year project group.\\
+%    \url{https://github.com/egnwd/outgain}
+%}
+%
+%\cventry[1em]{}{librespot}{Personal Project}{}{}{
+%    Reverse engineered, open source, Spotify client.\\
+%    \url{https://github.com/plietar/librespot}
+%}
+%
+%\cventry[1em]{}{Contributions to Open Source Projects}{}{}{}{}
+
+%\pagebreak
+%
+%\section{Activities, achievements and personal experience}
+%\cventry[1em]{2009 to present}{Competitive Rowing}{}{}{}{
+%    Bronze medal at French national championship in 2010 in boat of eight.\\
+%    Raced for Imperial College at the British University Championships in 2015 \& 2016.
+%}
+%
+%\cventry[1em]{Spring 2014\\Spring 2016}{Backpack travels on my own}{}{}{}{
+%    \begin{itemize}
+%        \item Visiting Italy for three weeks
+%        \item Cycling across Corsica for a week
+%        \item Cross country skiing in northern Sweden for a week
+%    \end{itemize}
+%}
+%
+%\cventry[1em]{}{Finalist at Prologin, the under 21 French national computing contest}{}{}{}{12th in 2011 and 67th in 2012.}
+%
+%\cventry[1em]{}{Lived abroad with family in Singapore (2 years) and California (4 years)}{}{}{}{}
+
+%\section{Technical skills}
+%\cvitem{Languages}{C, Python, Java, Haskell, Go, Rust}
+%\cvitem{Platforms}{PC, Android, STM32}
+
+%\section{Languages}
+%\cvitem{French}{Native language}
+%\cvitem{English}{Fluent, iBT Toefl 108/120}
+%\cvitem{Spanish}{Basic}
+
+%\addvspace{1em}
+%\cventry{}{\textit{References upon request}}{}{}{}{}
+
+%\makecvfooter
 \end{document}

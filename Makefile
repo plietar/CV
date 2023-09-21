@@ -14,3 +14,6 @@ clean:
 
 mrproper: clean
 	rm -f $(PDF)
+
+Paul\ Lietar.pdf: CV_en.pdf
+	cp "$<" "$@"
