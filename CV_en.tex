@@ -1,10 +1,10 @@
-\documentclass[11pt,a4paper,sans]{moderncv}
+\documentclass[12pt,a4paper,sans]{moderncv}
 
 
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 
-\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage[top=2.5cm,bottom=2.5cm,left=2cm,right=2cm]{geometry}
 \usepackage{xspace}
 
 \name{Paul}{Li\'etar}
@@ -14,7 +14,7 @@
 %\phone[fixed]{+33~4~76~49~91~83}
 \email{paul@lietar.net}
 \social[github]{plietar}
-\social[linkedin]{plietar}
+%\social[linkedin]{plietar}
 %\extrainfo{Born on December 28th, 1996}
 
 \setlength{\hintscolumnwidth}{0.12\textwidth}
@@ -34,25 +34,25 @@
 % \end{center}
 
 \section{Work experience}
-\cventry{2022-2023}{Research Software Engineer}{Microsoft}{Confidential Computing}{Cambridge, UK}{
+\cventry{2022 - 2023\\1 year}{Research Software Engineer}{Microsoft}{Confidential Computing}{Cambridge, UK}{
     I developed a ledger for software supply-chain transparency, based on the
     Confidential Consortium Framework. The ledger, written in \Cpp,
     executes inside of an SGX enclave. It records entries submitted by
     customers, enabling post-facto auditing of a service's software supply
     chain. The ledger issues receipts for offline verification of transactions.\\
     I participated in discussions at the IETF to create industry-wide standards
-    for the format and semantics of the receipts issued by the ledger, as part of the SCITT working group.
+    for the format and semantics of the receipts issued by the ledger.
     %\\I implemented a novel data structure to provide freshness guarantees about
     %the state of the ledger, and designed new algorithms to update the data
     %structure in an efficient way.
 }
-\cventry{2021-2022}{Distributed Systems Engineer}{Cloudflare}{}{London}{
-    I was an engineer on Quicksilver, the distributed key-value store written in Go, that
+\cventry{2021 - 2022\\1 year}{Distributed Systems Engineer}{Cloudflare}{}{London}{
+    I was an engineer on Quicksilver, the distributed key-value store written in Go that
     powers Cloudflare's edge network, replicating customer configurations from
     the core datacenter to all servers around the world.
     I worked on a project to partition the database across multiple nodes and
     designed a scheme to provide a consistent view to applications, even in the
-    face of asynchronous replication. I led the development of a new caching
+    face of asynchronous replication. I led the design and development of a new caching
     layer to optimize median request latency.
 }
 \cventry{2019\\9 months}{Research Intern}{Microsoft Research}{Confidential Computing}{Cambridge, UK}{
@@ -61,11 +61,11 @@
     compiler and bytecode interpreter, which has been used to show-case the
     language both internally and externally.\\
     I optimized and benchmarked \textit{snmalloc}, the memory allocator on top
-    of which the Verona runtime is built. I was the first author on our paper
+    of which the Verona runtime is built. I lead the authorship of our paper
     describing the allocator's operation, and presented the results at the ISMM
     conference in Phoenix, AZ.
 }
-\cventry{2017-2018}{Software Engineer}{Google}{Counter-Abuse Technology}{Zurich}{
+\cventry{2017 - 2018\\1 year}{Software Engineer}{Google}{Counter-Abuse Technology}{Zurich}{
     I worked on Android’s device integrity solution, protecting Google’s
     services against automated fraud and abuse. I worked both on the
     server side infrastructure, serving billions of devices around the world,
@@ -85,19 +85,21 @@
 
 \cventry{2015\\3 months}{Software Engineering Intern}{Google}{Certificate Transparency}{London}{
     I added support for Certificate Transparency to Android's network stack.
-    This required implementing the OCSP and SCT extensions to BoringSSL and
-    Conscrypt, the TLS implementations used by Android applications. I added
-    an API allowing Android applications to opt-in to Certificate Transparency
+    This required implementing new TLS extensions to BoringSSL and Conscrypt,
+    the TLS implementations used by Android applications. I added an API
+    allowing Android applications to opt-in to Certificate Transparency
     verification when establishing new network connections.
 }
 
-%\cventry[1em]{Winter 2013/14\\5 months}{Software Developer}{DecaWave}{Dublin}{}{
-%    Contributed to the development of DecaWave's Real Time Location System
-%    software. I worked both on the firmware running on ARM Cortex M3 devices,
-%    interfacing with DecaWave's custom silicon, as well as on the development
-%    of the coordination software on desktop, productionizing the
-%    algorithms designed by the research team.
-%}
+\cventry[1em]{2013 - 2014\\5 months}{Software Engineer}{DecaWave}{Dublin}{}{
+    I participated in the development of embedded firmware for the company's
+    STM32-based evaluation boards.  I worked on replacing the firmware's
+    network stack from uIP to lwIP and implemented a Multicast DNS responder
+    running on the evaluation board, allowing automatic discovery of the
+    devices over the network.\\
+    I assisted the research team in their algorithm development, and integrated
+    the outcome of the research into the devices' firmware.
+}
 
 %\cventry[1em]{July 2013, 4 weeks\\July 2012, 3 weeks}{Software Developer}{Movea}{Grenoble}{}{
 %    Development of applications for Android devices, demonstrating the use cases of products made by Movea,
@@ -116,19 +118,24 @@
 %    Development of a Symbian S60 application to display images from a network camera.
 %}
 
+\pagebreak
 \section{Publications}
-\cventry{June 2019}{Snmalloc: a message passing allocator}{}{}{}{
+\cventry{2023}{When Concurrency Matters: Behaviour-Oriented Concurrency}{}{}{}{
+    \textit{Proceedings of the ACM on Programming Languages}
+}
+\cventry{2019}{Snmalloc: a message passing allocator}{}{}{}{
     \textit{Proceedings of the 2019 ACM SIGPLAN International Symposium on Memory Management}
 }
 
 \section{Education}
-\cventry{2019-2021}{PhD Program (unfinished)}{Imperial College}{London}{}{
+\cventry{2019 - 2021}{PhD Program}{Imperial College}{London}{}{
     I worked on the design and formalization of a type system for regions,
     bringing safe and performant memory management to systems programming.
-    The type system forms the foundations of the Verona programming language.
+    The type system forms the foundations of the Verona programming language developed in partnership with Microsoft Research.
+    Interrupted due to COVID.
 }
 
-\cventry{2014-2017}{BEng Mathematics and Computer Science}{Imperial College}{London}{}{
+\cventry{2014 - 2017}{BEng Mathematics and Computer Science}{Imperial College}{London}{}{
     Graduated with first class honours.
     My bachelor thesis on \textit{Formalizing Generics in Pony} was selected as a distinguished project, and I
     received the \textit{Corporate Partnership Programme Award}, awarded to final year students for outstanding
